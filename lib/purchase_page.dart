@@ -38,9 +38,8 @@ class _PurchasePageState extends State<PurchasePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Purchase ${widget.product.productName}'),
-        backgroundColor: Color.fromARGB(197, 136, 255, 253),
-      ),
+          title: Text('Purchase ${widget.product.productName}'),
+          backgroundColor: Color.fromARGB(217, 234, 210, 149)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -49,7 +48,7 @@ class _PurchasePageState extends State<PurchasePage> {
             padding:
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 2.0),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 210, 198, 198),
+              color: Color.fromARGB(255, 196, 224, 164),
               borderRadius: BorderRadius.circular(18.0),
             ),
             child: Column(

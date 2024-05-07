@@ -57,7 +57,7 @@ class _AddProductPageState extends State<AddProductPage> {
       appBar: AppBar(
         title: const Text('Add Product'),
         backgroundColor: const Color.fromARGB(
-            255, 107, 235, 222), // Set the navigation bar color
+            217, 234, 210, 149), // Set the navigation bar color
       ),
       body: Center(
         child: Padding(
@@ -120,7 +120,7 @@ class _AddProductPageState extends State<AddProductPage> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color.fromARGB(
-                              255, 107, 235, 222), // Set the button color
+                              255, 196, 224, 164), // Set the button color
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),

@@ -73,7 +73,7 @@ class _ProductSearchState extends State<ProductSearch> {
             fontSize: 20,
           ),
         ),
-        backgroundColor: Color.fromARGB(255, 224, 138, 178),
+        backgroundColor: Color.fromARGB(217, 234, 210, 149),
         elevation: 0,
         actions: [
           IconButton(
