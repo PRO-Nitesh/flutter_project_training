@@ -49,6 +49,42 @@ class _ProductListState extends State<ProductList> {
     });
   }
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     body: ListView.builder(
+  //       itemCount: products.length,
+  //       itemBuilder: (context, index) {
+  //         final product = products[index];
+  //         return Card(
+  //           color: const Color.fromARGB(255, 196, 224, 164),
+  //           child: ListTile(
+  //             leading: CircleAvatar(
+  //               backgroundImage: AssetImage('assets/product_image.jpg'),
+  //             ),
+  //             title: Text(product.productName),
+  //             subtitle: Text('Quantity: ${product.quantity}'),
+  //             trailing: ElevatedButton(
+  //               onPressed: () {
+  //                 Navigator.push(
+  //                   context,
+  //                   MaterialPageRoute(
+  //                     builder: (context) => PurchasePage(
+  //                       product: product,
+  //                       onPurchase: _updateProductQuantity,
+  //                     ),
+  //                   ),
+  //                 );
+  //               },
+  //               child: const Text('Purchase'),
+  //             ),
+  //           ),
+  //         );
+  //       },
+  //     ),
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,21 +99,28 @@ class _ProductListState extends State<ProductList> {
                 backgroundImage: AssetImage('assets/product_image.jpg'),
               ),
               title: Text(product.productName),
-              subtitle: Text('Quantity: ${product.quantity}'),
-              trailing: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PurchasePage(
-                        product: product,
-                        onPurchase: _updateProductQuantity,
-                      ),
-                    ),
-                  );
-                },
-                child: const Text('Purchase'),
+              subtitle: Text(
+                'Quantity: ${product.quantity}',
+                style: TextStyle(
+                  color: product.quantity == 0 ? Colors.red : Colors.black,
+                ),
               ),
+              trailing: product.quantity == 0
+                  ? const SizedBox() // No button when quantity is 0
+                  : ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PurchasePage(
+                              product: product,
+                              onPurchase: _updateProductQuantity,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const Text('Purchase'),
+                    ),
             ),
           );
         },
