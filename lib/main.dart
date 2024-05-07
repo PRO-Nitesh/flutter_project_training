@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
             'Online shop',
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Color.fromARGB(217, 234, 210, 149),
+          backgroundColor: Color.fromARGB(217, 222, 85, 85),
           actions: <Widget>[
             IconButton(
               icon: const Icon(

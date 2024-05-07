@@ -69,11 +69,11 @@ class _ProductSearchState extends State<ProductSearch> {
         title: const Text(
           'Product Search',
           style: TextStyle(
-            fontWeight: FontWeight.bold,
             fontSize: 20,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Color.fromARGB(217, 234, 210, 149),
+        backgroundColor: Color.fromARGB(217, 222, 85, 85),
         elevation: 0,
         actions: [
           IconButton(

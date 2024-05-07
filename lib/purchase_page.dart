@@ -38,8 +38,15 @@ class _PurchasePageState extends State<PurchasePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Purchase ${widget.product.productName}'),
-          backgroundColor: Color.fromARGB(217, 234, 210, 149)),
+          // title: Text('Purchasing  ${widget.product.productName}'),
+          title: DefaultTextStyle(
+            style: const TextStyle(color: Colors.white),
+            child: Text(
+              'Purchasing ${widget.product.productName}',
+              style: const TextStyle(fontSize: 20.0), // Increase font size here
+            ),
+          ),
+          backgroundColor: Color.fromARGB(217, 222, 85, 85)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
